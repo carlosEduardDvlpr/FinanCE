@@ -9,13 +9,14 @@ datasource db {
 }
 
 model transactions {
-  id          Int               @id @default(autoincrement())
+  id          Int                   @id @default(autoincrement())
   user_id     Int
   type        transactions_type
-  amount      Decimal           @db.Decimal(12, 2)
-  description String            @db.VarChar(100)
-  date        DateTime          @db.Date
-  users       users             @relation(fields: [user_id], references: [id], onDelete: Cascade, map: "fk_transactions_user")
+  amount      Decimal               @db.Decimal(12, 2)
+  description String                @db.VarChar(100)
+  date        DateTime              @db.Date
+  category    transactions_category @default(home)
+  users       users                 @relation(fields: [user_id], references: [id], onDelete: Cascade, map: "fk_transactions_user")
 
   @@index([user_id], map: "fk_transactions_user_idx")
 }
@@ -31,4 +32,15 @@ model users {
 enum transactions_type {
   income
   expense
+}
+
+enum transactions_category {
+  home
+  food
+  transport
+  personal
+  education
+  leisure
+  debt
+  others
 }
