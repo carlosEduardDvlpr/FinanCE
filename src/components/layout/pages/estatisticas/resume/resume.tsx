@@ -48,13 +48,10 @@ export function Resume({
 
   return (
     <>
-      <div className="lg:px-28 md:px-16 sm:px-8 px-4 text-white sm:bg-primary/70 bg-primary py-3 sm:hidden flex justify-between items-center h-[76px]">
-        <h1 className="text-2xl font-bold text-white">FinanCE</h1>
-      </div>
-
       <div className="lg:px-28 md:px-16 sm:px-8 px-4">
         <div className="flex justify-between items-center my-10">
           <Button
+          className='dark:text-white'
             disabled={!months[currentMonth - 1]}
             onClick={() => setCurrentMonth(currentMonth - 1)}
           >
@@ -65,6 +62,7 @@ export function Resume({
             <p className="text-xs">{year}</p>
           </div>
           <Button
+          className='dark:text-white'
             disabled={
               !months[currentMonth + 1] &&
               currentMonth + 1 !== new Date().getMonth()
@@ -123,7 +121,7 @@ export function Resume({
         <ExpensePieChart data={allTransactions} />
         {allTransactions.length > 0 && (
           <Button
-            className="w-full sm:w-1/2 self-end"
+            className="w-full sm:w-1/2 self-end dark:text-white"
             size="icon"
             onClick={() =>
               generatePDF({

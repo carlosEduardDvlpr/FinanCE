@@ -119,7 +119,7 @@ export function ExpensePieChart({ data }: { data: TransactionProps[] }) {
           dy={10}
           textAnchor="middle"
           fill="#000000"
-          className="text-lg font-semibold"
+          className="text-base dark:fill-white font-semibold"
         >
           {formatNumberToCurrency(value)}
         </text>
