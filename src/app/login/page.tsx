@@ -8,6 +8,7 @@ export default async function LoginPage() {
   if (success) {
     redirect('/');
   }
+  
   return (
     <div className="grid min-h-dvh lg:grid-cols-2">
       <div className="relative hidden lg:block">
