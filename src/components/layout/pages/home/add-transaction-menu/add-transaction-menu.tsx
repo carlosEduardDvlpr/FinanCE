@@ -250,6 +250,7 @@ export function AddTransactionMenu({ userID }: { userID: number }) {
             placeholder="Digite o valor"
           />
           <Button
+            className="dark:text-white"
             disabled={
               isLoading ||
               !formData.transactionCategory ||
