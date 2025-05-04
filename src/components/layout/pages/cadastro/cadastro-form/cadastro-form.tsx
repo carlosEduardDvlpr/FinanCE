@@ -74,7 +74,7 @@ export function CadastroForm({
         ),
       });
 
-      setTimeout(() => redirect('/'), 1500);
+      setTimeout(() => redirect('/'), 1000);
     } catch (error) {
       setErrorMessage('Erro ao cadastrar, tente novamente mais tarde...');
       setIsLoading(false);
@@ -121,6 +121,7 @@ export function CadastroForm({
             }
             id="username"
             type="text"
+            autoCapitalize='off'
             maxLength={20}
             minLength={8}
             value={formData.username}
