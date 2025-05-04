@@ -1,6 +1,11 @@
 import { LoginForm } from '@/components/layout/pages/login/login-form/login-form';
 import { getAuthenticatedUser } from '../../../actions/GET/get-authenticated-user/get-authenticated-user';
 import { redirect } from 'next/navigation';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'FinanCE - Login',
+};
 
 export default async function LoginPage() {
   const { success } = await getAuthenticatedUser();

@@ -1,6 +1,11 @@
 import { CadastroForm } from '@/components/layout/pages/cadastro/cadastro-form/cadastro-form';
 import { getAuthenticatedUser } from '../../../actions/GET/get-authenticated-user/get-authenticated-user';
 import { redirect } from 'next/navigation';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'FinanCE - Cadastre-se',
+};
 
 export default async function CadastroPage() {
   const { success } = await getAuthenticatedUser();

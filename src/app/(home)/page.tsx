@@ -2,6 +2,11 @@ import { redirect } from 'next/navigation';
 import { getAuthenticatedUser } from '../../../actions/GET/get-authenticated-user/get-authenticated-user';
 import { TransactionTabs } from '@/components/layout/pages/home/transaction-tabs/transaction-tabs';
 import { getCurrentDate } from '../../../actions/GET/get-current-date/get-current-date';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'FinanCE - Dashboard',
+};
 
 export default async function HomePage() {
   const { user, success } = await getAuthenticatedUser();
