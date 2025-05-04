@@ -3,11 +3,12 @@
 import { cookies } from 'next/headers';
 import { db } from '@/lib/prisma';
 import jwt from 'jsonwebtoken';
+import { transformeTransactionsAmount } from '../../../helpers/transforme-transactions-amount/transforme-transactions-amount';
+
+const TOKEN_NAME = process.env.TOKEN_NAME;
+const SECRET_KEY = process.env.SECRET_KEY;
 
 export async function getAuthenticatedUser() {
-  const TOKEN_NAME = process.env.TOKEN_NAME;
-  const SECRET_KEY = process.env.SECRET_KEY;
-
   if (!TOKEN_NAME || !SECRET_KEY) {
     return {
       success: false,
@@ -61,7 +62,19 @@ export async function getAuthenticatedUser() {
 
     return {
       success: true,
-      user,
+      user: {
+        name: user.name,
+        id: user.id,
+        username: user.username,
+        incomes: transformeTransactionsAmount({
+          transactions: user.transactions,
+          type: 'income',
+        }),
+        expenses: transformeTransactionsAmount({
+          transactions: user.transactions,
+          type: 'expense',
+        }),
+      },
     };
   } catch (error) {
     cookieStore.delete(TOKEN_NAME);
