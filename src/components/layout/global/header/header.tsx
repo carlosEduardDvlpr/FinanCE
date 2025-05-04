@@ -1,10 +1,13 @@
+'use client';
+
 import { ChartLine, Layers, Sheet, User } from 'lucide-react';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 
 export function Header() {
   return (
-    <header className="lg:px-28 md:px-16 sm:px-8 px-4 flex items-center justify-between bg-primary sm:h-[70px] sm:relative fixed bottom-0 w-full">
-      <h1 className="text-2xl sm:block hidden font-bold text-white">Finance</h1>
+    <header className="lg:px-28 md:px-16 sm:px-8 px-4 flex items-center justify-between bg-primary sm:h-[70px] sm:relative z-50 fixed bottom-0 w-full">
+      <h1 className="text-2xl sm:block hidden font-bold text-white">FinanCE</h1>
       <nav className="text-white sm:w-auto w-full flex gap-4 text-base">
         <Link
           className="hover:underline items-center sm:py-0 py-4 justify-center flex gap-2 flex-1 text-center sm:border-0 border-r"
@@ -30,4 +33,14 @@ export function Header() {
       </nav>
     </header>
   );
+}
+
+export function VerifyHeader() {
+  const publicPaths = ['/cadastro', '/login'];
+  const pathname = usePathname();
+
+  if (publicPaths.includes(pathname)) {
+    return null;
+  }
+  return <Header />;
 }
