@@ -135,7 +135,6 @@ export function ViewSaidas({
                         <div className="flex flex-col gap-2">
                           {currentMonth === new Date().getMonth() && (
                             <Button
-                              className="dark:text-white"
                               onClick={() => handleDeleteAccount(expense.id)}
                             >
                               <Trash />
