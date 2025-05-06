@@ -36,8 +36,7 @@ export function DeleteAccount({ userId }: { userId: number }) {
           <DialogHeader>
             <DialogTitle>ATENÇÃO</DialogTitle>
             <DialogDescription className="sm:text-center text-left">
-              Ao excluir sua conta, você perderá todos os dados associados a
-              ela. Essa ação não pode ser desfeita.
+              Ao excluir sua conta, você perderá todos os dados. Essa ação não pode ser desfeita.
             </DialogDescription>
           </DialogHeader>
           <div className="py-4">
@@ -46,7 +45,7 @@ export function DeleteAccount({ userId }: { userId: number }) {
           <DialogFooter>
             <div className="flex gap-2">
               <DialogClose asChild>
-                <Button className="flex-1" type="button" variant="secondary">
+                <Button className="flex-1" type="button">
                   Fechar
                 </Button>
               </DialogClose>
