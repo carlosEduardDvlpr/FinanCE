@@ -4,7 +4,7 @@ generator client {
 }
 
 datasource db {
-  provider = "mysql"
+  provider = "postgresql"
   url      = env("DATABASE_URL")
 }
 
@@ -14,7 +14,7 @@ model transactions {
   type        transactions_type
   amount      Decimal               @db.Decimal(8, 2)
   description String                @db.VarChar(40)
-  date        DateTime              @db.DateTime(0)
+  date        DateTime
   category    transactions_category @default(home)
   users       users                 @relation(fields: [user_id], references: [id], onDelete: Cascade, map: "fk_transactions_user")
 
