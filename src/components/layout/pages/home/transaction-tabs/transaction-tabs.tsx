@@ -60,7 +60,6 @@ export function TransactionTabs({
       <div className="lg:px-28 md:px-16 sm:px-8 px-4">
         <div className="flex justify-between items-center my-10">
           <Button
-          className='dark:text-white'
             disabled={!months[currentMonth - 1]}
             onClick={() => setCurrentMonth(currentMonth - 1)}
           >
@@ -71,7 +70,6 @@ export function TransactionTabs({
             <p className="text-xs">{year}</p>
           </div>
           <Button
-          className='dark:text-white'
             disabled={
               !months[currentMonth + 1] &&
               currentMonth + 1 !== new Date().getMonth()
