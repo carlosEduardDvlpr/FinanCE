@@ -40,7 +40,7 @@ export function DeleteAccount({ userId }: { userId: number }) {
             </DialogDescription>
           </DialogHeader>
           <div className="py-4">
-            <p>Você tem certeza que deseja excluir sua conta ?</p>
+            <p>Você realmente deseja excluir sua conta ?</p>
           </div>
           <DialogFooter>
             <div className="flex gap-2">
