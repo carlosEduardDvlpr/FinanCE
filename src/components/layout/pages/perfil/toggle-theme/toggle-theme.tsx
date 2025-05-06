@@ -30,6 +30,7 @@ export function ThemeToggle() {
       <Switch
         id="theme-toggle"
         checked={isDarkMode}
+        className="cursor-pointer"
         onCheckedChange={toggleTheme}
         aria-label="Alternar tema"
       />
