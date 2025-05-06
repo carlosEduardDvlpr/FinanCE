@@ -38,7 +38,7 @@ export async function getUserLogin({ username, password }: GetUSerLoginProps) {
       };
     }
 
-    const isValidPassword = await bcrypt.compare(password, user?.password_hash);
+    const isValidPassword = await bcrypt.compare(password, user?.password_hash.trim());
 
     if (!isValidPassword) {
       return {
