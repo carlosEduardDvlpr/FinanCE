@@ -4,8 +4,8 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { $Enums } from '@prisma/client';
 import { Trash } from 'lucide-react';
-import { deleteAccount } from '../../../../../../actions/DELETE/delete-account/delete-account';
 import { toast } from 'sonner';
+import { deleteTransaction } from '../../../../../../actions/DELETE/delete-transactions/delete-transactions';
 
 interface ViewEntradasProps {
   amount: number;
@@ -25,13 +25,13 @@ export function ViewEntradas({
   currentMonth: number;
 }) {
   const handleDeleteAccount = async (id: number) => {
-    const { success } = await deleteAccount({ accountId: id });
+    const { success } = await deleteTransaction({ transactionId: id });
 
     if (success) {
-      toast.success('Conta excluída com sucesso!');
+      toast.success('Transação excluída com sucesso!');
       return;
     }
-    toast.error('Erro ao excluir conta, tente novamente...');
+    toast.error('Erro ao excluir transação, tente novamente...');
   };
 
   return (

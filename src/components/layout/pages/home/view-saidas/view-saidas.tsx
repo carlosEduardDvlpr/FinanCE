@@ -4,10 +4,9 @@ import { Card, CardContent, CardFooter } from '@/components/ui/card';
 import { $Enums } from '@prisma/client';
 import { getlabelIconCategory } from '../../../../../../helpers/get-label-and-icon-category/get-label-and-icon-category';
 import { Button } from '@/components/ui/button';
-import { HelpCircle, Trash } from 'lucide-react';
-import { deleteAccount } from '../../../../../../actions/DELETE/delete-account/delete-account';
+import { Trash } from 'lucide-react';
 import { toast } from 'sonner';
-import { group } from 'console';
+import { deleteTransaction } from '../../../../../../actions/DELETE/delete-transactions/delete-transactions';
 
 interface ViewSaidasProps {
   amount: number;
@@ -36,7 +35,7 @@ export function ViewSaidas({
   ).map(([category, total]) => ({ category, total }));
 
   const handleDeleteAccount = async (id: number) => {
-    const { success } = await deleteAccount({ accountId: id });
+    const { success } = await deleteTransaction({ transactionId: id });
 
     if (success) {
       toast.success('Conta excluída com sucesso!');
