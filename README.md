@@ -1,36 +1,79 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 💰 FinanCE
 
-## Getting Started
+**FinanCE** é um aplicativo simples e eficiente para controle de finanças pessoais. Com ele, você pode registrar entradas e saídas de dinheiro, visualizar relatórios por categoria e acompanhar sua saúde financeira com clareza.
 
-First, run the development server:
+## ✨ Funcionalidades
+
+- ✅ Adição de **entradas** de saldo
+- ✅ Registro de **despesas** por categorias:
+  - 🏠 Casa
+  - 🍔 Alimentação
+  - 🚗 Transporte
+  - 📚 Educação
+  - 💳 Dívidas
+  - 🎉 Lazer
+  - 🧍 Pessoal
+  - 🗂️ Outros
+- ✅ **Resumo financeiro geral**, incluindo:
+  - Total de entradas
+  - Total de despesas
+  - Saldo disponível
+- ✅ **Gráfico** por categoria
+- ✅ Geração de relatório em PDF
+
+## 🧭 Como usar
+
+1. Adicione suas **receitas** e **despesas** conforme elas ocorrem.
+2. Acompanhe o **saldo atualizado** e seus **gastos por categoria**.
+3. Gere **relatórios** periódicos para ter uma visão mais clara do seu comportamento financeiro.
+
+## 🚀 Tecnologias utilizadas
+
+- **Next.js** para o frontend
+- **Prisma ORM** com **PostgreSQL** no backend
+- **Sessão persistente** com **JWT**
+- **Tailwind CSS** e componentes **Shadcn/UI** para o design responsivo
+- **Recharts** para os gráficos
+- **JSPDF** para exportar os relatórios
+
+## 📦 Instalação
+
+### Pré-Requisitos:
+
+- Ter um banco postgresql ou mysql.
+
+### Clone o projeto:
+
+```bash
+git clone https://github.com/carlosEduardDvlpr/FinanCE.git
+cd FinanCE
+npm install
+```
+
+- Crie na raiz do projeto um arquivo .env e configure suas variáveis de ambiente:
+
+```javascript
+DATABASE_URL = 'postgresql://*********************'; // sua string de conexão com o banco de dados (altere o provedor em /prisma/schema.prisma se for usar um banco diferente de postgresql)
+SECRET_KEY = 'minhahashsecretaparaJWT'; // chave secreta para o JWT
+TOKEN_NAME = 'nomeparameutoken'; // nome do token de acesso (salvo nos cookies)
+```
+
+- Para gerar as tabelas no seu banco, execute no termininal:
+
+```bash
+npx prisma migrate dev --name init
+```
+
+- Gere o client do Prisma:
+
+```bash
+npx prisma generate
+```
+
+Por fim, execute o projeto:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+| Desenvolvido por Carlos Eduardo
