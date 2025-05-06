@@ -138,8 +138,8 @@ export function AddTransactionMenu({ userID }: { userID: number }) {
   return (
     <Sheet>
       <SheetTrigger asChild>
-        <Button className="bg-background hover:bg-foreground hover:text-background text-foreground">
-          entrada/saída <Plus />
+        <Button className="bg-background hover:bg-foreground hover:text-background text-foreground dark:hover:text-black">
+          entrada / saída <Plus />
         </Button>
       </SheetTrigger>
       <SheetContent side="left">
