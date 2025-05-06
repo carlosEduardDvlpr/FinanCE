@@ -96,7 +96,7 @@ export function LoginForm({
           <Input
             className={
               errorMessage === 'Nome de usuário - mínimo 8 caracteres!'
-                ? 'border-red-600'
+                ? 'border-red-500'
                 : ''
             }
             id="username"
@@ -121,7 +121,7 @@ export function LoginForm({
               maxLength={15}
               className={
                 errorMessage === 'Senha - mínimo 8 caracteres!'
-                  ? 'border-red-600'
+                  ? 'border-red-500'
                   : ''
               }
               minLength={8}
@@ -147,7 +147,7 @@ export function LoginForm({
           {errorMessage && (
             <p
               className="
-          text-red-600 text-sm font-medium"
+          text-red-500 text-sm font-medium"
             >
               {errorMessage}
             </p>

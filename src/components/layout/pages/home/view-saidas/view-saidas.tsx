@@ -122,7 +122,7 @@ export function ViewSaidas({
                               },
                             )}
                           </p>{' '}
-                          <span className={`text-lg font-bold text-red-600`}>
+                          <span className={`text-lg font-bold text-red-500`}>
                             -{' '}
                             {expense.amount.toLocaleString('pt-BR', {
                               style: 'currency',

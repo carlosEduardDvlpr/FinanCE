@@ -116,7 +116,7 @@ export function CadastroForm({
           <Input
             className={
               errorMessage === 'Nome de usuário em uso, defina outro!'
-                ? 'border-red-600'
+                ? 'border-red-500'
                 : ''
             }
             id="username"
@@ -162,7 +162,7 @@ export function CadastroForm({
           {errorMessage && (
             <p
               className="
-          text-red-600 text-sm font-medium"
+          text-red-500 text-sm font-medium"
             >
               {errorMessage}
             </p>

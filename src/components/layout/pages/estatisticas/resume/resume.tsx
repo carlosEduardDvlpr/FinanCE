@@ -79,7 +79,7 @@ export function Resume({
               </CardTitle>
             </CardHeader>
             <CardContent>
-              <div className="text-xl sm:text-center text-left font-bold text-green-600">
+              <div className="text-xl sm:text-center text-left font-bold text-primary">
                 {formatNumberToCurrency(totalIncomes)}
               </div>
             </CardContent>
@@ -92,7 +92,7 @@ export function Resume({
               </CardTitle>
             </CardHeader>
             <CardContent>
-              <div className="text-xl sm:text-center text-left font-bold text-red-600">
+              <div className="text-xl sm:text-center text-left font-bold text-red-500">
                 {formatNumberToCurrency(totalExpenses)}
               </div>
             </CardContent>
@@ -105,7 +105,7 @@ export function Resume({
             <CardContent>
               <div
                 className={`text-xl sm:text-center text-left font-bold ${
-                  currentBalance >= 0 ? 'text-green-600' : 'text-red-600'
+                  currentBalance >= 0 ? 'text-primary' : 'text-red-500'
                 }`}
               >
                 {formatNumberToCurrency(currentBalance)}
