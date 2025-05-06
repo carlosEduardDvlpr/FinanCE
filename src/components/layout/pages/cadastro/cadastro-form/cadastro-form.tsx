@@ -70,7 +70,7 @@ export function CadastroForm({
 
       toast.success(message, {
         description: (
-          <p className="text-black">Você será redirecionado para home...</p>
+          <p className="text-black dark:text-white">Você será redirecionado para home...</p>
         ),
       });
 
