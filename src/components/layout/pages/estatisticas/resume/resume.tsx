@@ -51,7 +51,6 @@ export function Resume({
       <div className="lg:px-28 md:px-16 sm:px-8 px-4">
         <div className="flex justify-between items-center my-10">
           <Button
-          className='dark:text-white'
             disabled={!months[currentMonth - 1]}
             onClick={() => setCurrentMonth(currentMonth - 1)}
           >
@@ -62,7 +61,6 @@ export function Resume({
             <p className="text-xs">{year}</p>
           </div>
           <Button
-          className='dark:text-white'
             disabled={
               !months[currentMonth + 1] &&
               currentMonth + 1 !== new Date().getMonth()
@@ -117,11 +115,11 @@ export function Resume({
         </div>
       </div>
 
-      <div className="lg:px-28 md:px-16 sm:px-8 px-4 flex flex-col gap-3 mb-24 ">
+      <div className="lg:px-28 md:px-16 sm:px-8 px-4 flex flex-col gap-3 sm:mb-6 mb-24">
         <ExpensePieChart data={allTransactions} />
         {allTransactions.length > 0 && (
           <Button
-            className="w-full sm:w-1/2 self-end dark:text-white"
+            className="w-full sm:w-1/2 self-end"
             size="icon"
             onClick={() =>
               generatePDF({
