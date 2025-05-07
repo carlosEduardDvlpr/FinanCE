@@ -7,21 +7,10 @@
 ## ✨ Funcionalidades
 
 - ✅ Adição de **entradas** de saldo
-- ✅ Registro de **despesas** por categorias:
-  - 🏠 Casa
-  - 🍔 Alimentação
-  - 🚗 Transporte
-  - 📚 Educação
-  - 💳 Dívidas
-  - 🎉 Lazer
-  - 🧍 Pessoal
-  - 🗂️ Outros
-- ✅ **Resumo financeiro geral**, incluindo:
-  - Total de entradas
-  - Total de despesas
-  - Saldo disponível
-- ✅ **Gráfico** por categoria
-- ✅ Geração de relatório em PDF
+- ✅ Adição de **despesas** por categorias
+- ✅ **Resumo financeiro**
+- ✅ **Gráfico** das suas despesas por categoria
+- ✅ Geração de relatórios em PDF
 
 ## 🧭 Como usar
 
@@ -31,8 +20,8 @@
 
 ## 🚀 Tecnologias utilizadas
 
-- **Next.js** para o frontend
-- **Prisma ORM** com **PostgreSQL** no backend
+- **Next.js**
+- **Prisma ORM** com **PostgreSQL**
 - **Sessão persistente** com **JWT**
 - **Tailwind CSS** e componentes **Shadcn/UI** para o design responsivo
 - **Recharts** para os gráficos
