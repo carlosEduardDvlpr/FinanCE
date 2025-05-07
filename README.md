@@ -18,7 +18,7 @@
 2. Acompanhe o **saldo atualizado** e seus **gastos por categoria**.
 3. Gere **relatórios** periódicos para ter uma visão mais clara do seu comportamento financeiro.
 
-<img src="https://i.ibb.co/MmTfGSx/May-6-2025-9-57-39-PM-Screenshot.jpg" height="400px" style="margin-block: 50px">
+<img src="https://i.ibb.co/MmTfGSx/May-6-2025-9-57-39-PM-Screenshot.jpg" style="margin-block: 50px">
 
 ## 🚀 Tecnologias utilizadas
 
