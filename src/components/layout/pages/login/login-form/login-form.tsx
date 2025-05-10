@@ -106,7 +106,10 @@ export function LoginForm({
             autoCapitalize="off"
             value={formData.username}
             onChange={(e) => {
+              e.currentTarget.value = e.currentTarget.value.trim();
+
               if (e.currentTarget.value.length > 20) return;
+
               setFormData({ ...formData, username: e.currentTarget.value });
             }}
             placeholder="Seu nome de usuário"
@@ -127,7 +130,10 @@ export function LoginForm({
               minLength={8}
               value={formData.password}
               onChange={(e) => {
+                e.currentTarget.value = e.currentTarget.value.trim();
+
                 if (e.currentTarget.value.length > 15) return;
+
                 setFormData({ ...formData, password: e.currentTarget.value });
               }}
               placeholder="Sua senha"

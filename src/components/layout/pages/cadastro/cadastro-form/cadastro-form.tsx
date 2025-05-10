@@ -70,7 +70,9 @@ export function CadastroForm({
 
       toast.success(message, {
         description: (
-          <p className="text-black dark:text-white">Você será redirecionado para home...</p>
+          <p className="text-black dark:text-white">
+            Você será redirecionado para home...
+          </p>
         ),
       });
 
@@ -121,12 +123,15 @@ export function CadastroForm({
             }
             id="username"
             type="text"
-            autoCapitalize='off'
+            autoCapitalize="off"
             maxLength={20}
             minLength={8}
             value={formData.username}
             onChange={(e) => {
+              e.currentTarget.value = e.currentTarget.value.trim();
+
               if (e.currentTarget.value.length > 20) return;
+
               setFormData({ ...formData, username: e.currentTarget.value });
             }}
             placeholder="Crie um nome de usuário"
@@ -142,7 +147,10 @@ export function CadastroForm({
               minLength={8}
               value={formData.password}
               onChange={(e) => {
+                e.currentTarget.value = e.currentTarget.value.trim();
+
                 if (e.currentTarget.value.length > 15) return;
+
                 setFormData({ ...formData, password: e.currentTarget.value });
               }}
               placeholder="Crie uma senha"
