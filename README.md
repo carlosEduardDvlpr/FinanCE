@@ -1,6 +1,6 @@
 # 💰 FinanCE
 
-**FinanCE** é um aplicativo simples e eficiente para controle de finanças pessoais. Com ele, você pode registrar entradas e saídas de dinheiro, visualizar relatórios por categoria e acompanhar sua saúde financeira com clareza.
+**FinanCE** é um aplicativo simples e eficiente para controle de finanças pessoais. Com ele, você pode registrar entradas e saídas de dinheiro, visualizar relatórios e acompanhar sua saúde financeira.
 
 👉 [Acesse o FinanCE aqui](https://finance-organizer.vercel.app)
 
@@ -14,9 +14,9 @@
 
 ## 🧭 Como usar
 
-1. Adicione suas **receitas** e **despesas** conforme elas ocorrem.
+1. Adicione suas **entradas** e **despesas** conforme elas ocorrem.
 2. Acompanhe o **saldo atualizado** e seus **gastos por categoria**.
-3. Gere **relatórios** periódicos para ter uma visão mais clara do seu comportamento financeiro.
+3. Gere **relatórios** periódicos para ter uma visão mais clara do seu financeiro.
 
 <img src="https://i.ibb.co/MmTfGSx/May-6-2025-9-57-39-PM-Screenshot.jpg" style="margin-block: 50px">
 
@@ -24,10 +24,10 @@
 
 - **Next.js**
 - **Prisma ORM** com **PostgreSQL**
-- **Sessão persistente** com **JWT**
-- **Tailwind CSS** e componentes **Shadcn/UI** para o design responsivo
-- **Recharts** para os gráficos
-- **JSPDF** para exportar os relatórios
+- **JWT** para autenticação
+- **Tailwind CSS** + **Shadcn/UI** para design responsivo
+- **Recharts** para o gráficos de despesas
+- **JSPDF** para exportação dos relatórios em PDF
 
 ## 📦 Instalação
 
